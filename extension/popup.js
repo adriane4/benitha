@@ -1,0 +1,1 @@
+const key="withcomy_enabled";const b=document.getElementById("toggle");async function sync(){const r=await chrome.storage.local.get(key);b.textContent=r[key]===false?"Show overlay":"Hide overlay"}b.onclick=async()=>{const r=await chrome.storage.local.get(key);await chrome.storage.local.set({[key]:r[key]===false});sync()};sync();
