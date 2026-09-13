@@ -1,0 +1,1 @@
+function render(){chrome.storage.local.get("withcomy_enabled",r=>{let e=document.getElementById("withcomy-overlay");if(r.withcomy_enabled===false){e?.remove();return}if(!e){e=document.createElement("div");e.id="withcomy-overlay";e.textContent="WITHCOMY";document.documentElement.appendChild(e)}})}render();chrome.storage.onChanged.addListener(render);
